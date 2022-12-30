@@ -1,0 +1,21 @@
+import random
+
+n=(random.randrange(1,100))
+
+number_of_guesses=1
+print("you are having only 7 guesses else you will loose!\nshit in your pant :)")
+while(number_of_guesses<=7):
+ guess_number=int(input("enter the number: "))
+ if(guess_number<n):
+  print("YOU ENTERED SMALLER NUMBER")
+ elif(guess_number>n):
+  print("YOU GUESS LARGER NUMBER")
+ else:
+  print("CONGRATULATION! YOU WON THE SPOTLIGHT IN THE BLACKHOLE")
+  print("YOU TOOK",number_of_guesses," ATTEMPT")
+  break
+ print("ATTEMPTS LEFT",7-number_of_guesses)
+ number_of_guesses = number_of_guesses+1
+if(number_of_guesses>7):
+  print("YOU WILL BE HONOUR WITH THE MEDAL OF DUMBEST KID")
+  print("BY THE WAY NUMBER WAS: ",n)
